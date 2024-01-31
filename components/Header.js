@@ -9,10 +9,10 @@ const NavBar = () => {
   const BLOG = useConfig()
   const locale = useLocale()
   const links = [
-    { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
+    { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: false },
     { id: 1, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
-    { id: 2, name: locale.NAV.RSS, to: '/feed', show: true, external: true },
-    { id: 3, name: locale.NAV.SEARCH, to: '/search', show: true }
+    { id: 2, name: locale.NAV.RSS, to: '/feed', show: false, external: false },
+    { id: 3, name: locale.NAV.SEARCH, to: '/search', show: false }
   ]
   return (
     <div className="flex-shrink-0">
@@ -92,15 +92,29 @@ export default function Header ({ navBarTitle, fullWidth }) {
         ref={navRef}
         onClick={handleClickHeader}
       >
-        <svg
-          viewBox="0 0 24 24"
-          className="caret w-6 h-6 absolute inset-x-0 bottom-0 mx-auto pointer-events-none opacity-30 group-hover:opacity-100 transition duration-100"
-        >
-          <path
-            d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z"
-            className="fill-black dark:fill-white"
-          />
-        </svg>
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="79.000000pt" height="20.000000pt" viewBox="0 0 79.000000 20.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,20.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M415 192 c-68 -23 -92 -79 -60 -142 17 -32 72 -55 107 -45 43 13 68
+46 68 87 0 52 -15 77 -55 94 -19 8 -36 14 -37 13 -2 -1 -12 -4 -23 -7z m59
+-58 c22 -21 20 -50 -4 -74 -24 -24 -29 -24 -58 -4 -24 17 -30 62 -10 82 17 17
+54 15 72 -4z"/>
+<path d="M671 184 c-25 -10 -31 -19 -31 -42 0 -34 11 -45 63 -61 20 -7 37 -17
+37 -22 0 -17 -30 -22 -57 -10 -21 10 -29 9 -41 -3 -13 -12 -11 -16 9 -26 40
+-22 99 -18 120 9 10 13 19 29 19 36 0 21 -29 45 -61 52 -36 7 -56 28 -34 37 8
+3 26 1 39 -4 18 -6 28 -5 37 6 15 18 9 24 -34 34 -22 5 -45 3 -66 -6z"/>
+<path d="M0 100 l0 -90 70 0 c63 0 70 2 70 20 0 17 -7 20 -45 20 l-45 0 0 70
+c0 68 -1 70 -25 70 -25 0 -25 -1 -25 -90z"/>
+<path d="M170 100 l0 -90 70 0 c63 0 70 2 70 20 0 17 -7 20 -50 20 -38 0 -50
+4 -50 15 0 11 12 15 45 15 38 0 45 3 45 20 0 17 -7 20 -45 20 -33 0 -45 4 -45
+15 0 11 12 15 50 15 43 0 50 3 50 20 0 18 -7 20 -70 20 l-70 0 0 -90z"/>
+<path d="M560 30 c0 -15 7 -20 25 -20 18 0 25 5 25 20 0 15 -7 20 -25 20 -18
+0 -25 -5 -25 -20z"/>
+</g>
+</svg>
         <div className="flex items-center">
           <Link href="/" aria-label={BLOG.title}>
             <Image
