@@ -1,5 +1,5 @@
 const BLOG = {
-  title: 'Blog officiel de Leo.Sun',
+  title: 'Blog officiel',
   author: 'Leo.SUN',
   email: 'm@leosun.fr',
   link: 'https://blog.leosun.fr',
@@ -14,7 +14,7 @@ const BLOG = {
   since: 2020, // If leave this empty, current year will be used.
   postsPerPage: 6,
   sortByDate: false,
-  showAbout: true,
+  showAbout: false,
   showArchive: false,
   autoCollapsedNavBar: true, // The automatically collapsed navigation bar
   ogImageGenerateURL: 'https://og-image-craigary.vercel.app', // The link to generate OG image, don't end with a slash
