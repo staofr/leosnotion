@@ -93,7 +93,9 @@ export default function Header ({ navBarTitle, fullWidth }) {
         onClick={handleClickHeader}
       >
 <?xml version="1.0"?>
-<svg width="90" height="23" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="79.000000pt" height="20.000000pt" viewBox="0 0 79.000000 20.000000"
+ preserveAspectRatio="xMidYMid meet">
  <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
  <g class="layer">
   <title>Layer 1</title>
